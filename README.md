@@ -43,7 +43,7 @@ This returned the ROS 2 installation location, for example:
 /opt/ros/humble
 ```
 
-![Finding the Package Location](images/task1-1.png)
+![Finding the Package Location](commands/task1-1.png)
 
 ---
 
@@ -55,7 +55,7 @@ The talker Python file was opened using the following command:
 sudo nano /opt/ros/humble/lib/python3.10/site-packages/demo_nodes_py/topics/talker.py
 ```
 
-![Opening the Talker File](images/task1-2.png)
+![Opening the Talker File](commands/task1-2.png)
 
 ---
 
@@ -73,7 +73,7 @@ It was changed to a custom message:
 msg.data = 'Hello from my robot!'
 ```
 
-![Modifying the Talker Message](images/task1-3.png)
+![Modifying the Talker Message](commands/task1-3.png)
 
 The file was then saved using:
 
@@ -93,7 +93,7 @@ ros2 run demo_nodes_py talker
 
 The talker acts as the **publisher**, continuously publishing the modified message.
 
-![Running the Publisher](images/task1-4.png)
+![Running the Publisher](commands/task1-4.png)
 
 ---
 
@@ -107,7 +107,7 @@ ros2 run demo_nodes_py listener
 
 The listener acts as the **subscriber** and receives the messages published by the talker.
 
-![Running the Subscriber](images/task1-5.png)
+![Running the Subscriber](commands/task1-5.png)
 
 ---
 
@@ -118,7 +118,7 @@ The publisher successfully sent the modified message, and the subscriber success
 The listener displayed:
 
 ```text
-I heard: "Hello from my robot!"
+I heard: "Beep boop! ROS 2 robot reporting for duty!"
 ```
 
 This demonstrated basic communication between a ROS 2 publisher and subscriber using a topic.
