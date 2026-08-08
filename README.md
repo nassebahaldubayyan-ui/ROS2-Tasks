@@ -70,7 +70,7 @@ msg.data = 'Hello World: %d' % self.i
 It was changed to a custom message:
 
 ```python
-msg.data = 'Hello from my robot!'
+msg.data = 'Beep boop! ROS 2 robot reporting for duty!'
 ```
 
 ![Modifying the Talker Message](commands/task1-3.png)
