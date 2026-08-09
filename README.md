@@ -121,8 +121,6 @@ The listener displayed:
 I heard: "Beep boop! ROS 2 robot reporting for duty!"
 ```
 
-This demonstrated basic communication between a ROS 2 publisher and subscriber using a topic.
-
 ---
 
 # Task 2: Turtle Robot Movement
@@ -282,6 +280,19 @@ The Turtle successfully moved forward and turned approximately 90 degrees after 
 
 ![Turtle Moving in a Square](commands/task2-10.png)
 
-The task demonstrated how ROS 2 can be used to control a simulated robot by publishing velocity commands to the `/turtle1/cmd_vel` topic and receiving the Turtle's position and orientation through `/turtle1/pose`.
+---
+
+## License
+
+This project is intended for educational purposes.
 
 ---
+
+# 👩‍💻 Author
+
+**Nassebah Al-Dubayyan**
+
+Computer Science Student
+<p align="center">
+⭐ If you found this project interesting, consider giving it a star!
+</p>
