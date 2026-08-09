@@ -127,4 +127,161 @@ This demonstrated basic communication between a ROS 2 publisher and subscriber u
 
 # Task 2: Turtle Robot Movement
 
-*Task 2 will be documented here after completing the Turtle robot movement steps.*
+## Objective
+
+The objective of Task 2 was to program a simulated Turtle robot to move in a **square pattern** using ROS 2 and the `turtlesim` simulator.
+
+A Python ROS 2 node was created to publish velocity commands to the Turtle. The program controls the Turtle by making it move forward and rotate 90 degrees repeatedly until four sides of the square are completed.
+
+## Steps
+
+### Step 1: Create the Turtle Scripts Folder
+
+A folder was created to store the Python Turtle program:
+
+```bash
+mkdir -p ~/turtle_scripts
+```
+
+![Creating the Turtle Scripts Folder](commands/task2-1.png)
+
+---
+
+### Step 2: Enter the Folder
+
+The newly created folder was opened using:
+
+```bash
+cd ~/turtle_scripts
+```
+
+![Opening the Turtle Scripts Folder](commands/task2-2.png)
+
+---
+
+### Step 3: Create the Python Program
+
+The Nano text editor was opened to create the Turtle program:
+
+```bash
+nano turtle_square.py
+```
+**see main.py for code** 
+
+![Creating the Turtle Python File](commands/task2-3.png)
+
+The file was saved using:
+
+```text
+Ctrl + O → Enter → Ctrl + X
+```
+
+---
+
+### Step 4: Verify the File
+
+The contents of the folder were checked using:
+
+```bash
+ls -l
+```
+
+The created Python file should appear:
+
+```text
+turtle_square.py
+```
+
+![Checking the Turtle File](commands/task2-4.png)
+
+---
+
+### Step 5: Give the File Execute Permission
+
+Execute permission was given to the Python file using:
+
+```bash
+chmod +x turtle_square.py
+```
+
+![Giving Execute Permission](commands/task2-5.png)
+
+---
+
+### Step 6: Verify the File Permissions
+
+The permissions were checked using:
+
+```bash
+ls -l turtle_square.py
+```
+
+The file should have execute permissions, shown by `x` characters in the output, for example:
+
+```text
+-rwxr-xr-x
+```
+
+![Checking File Permissions](commands/task2-6.png)
+
+---
+
+### Step 7: Source ROS 2
+
+The ROS 2 Humble environment was sourced using:
+
+```bash
+source /opt/ros/humble/setup.bash
+```
+
+![Sourcing ROS 2](commands/task2-7.png)
+
+---
+
+### Step 8: Start the Turtlesim Simulator
+
+The ROS 2 Turtlesim simulator was started using:
+
+```bash
+ros2 run turtlesim turtlesim_node
+```
+
+This opened the Turtlesim simulation window containing the Turtle robot.
+
+![Turtlesim Simulator](commands/task2-8.png)
+
+---
+
+### Step 9: Run the Turtle Program
+
+In another Ubuntu terminal, ROS 2 was sourced again:
+
+```bash
+source /opt/ros/humble/setup.bash
+```
+
+Then the Turtle scripts folder was opened:
+
+```bash
+cd ~/turtle_scripts
+```
+
+Finally, the Turtle program was executed:
+
+```bash
+python3 turtle_square.py
+```
+
+![Running the Turtle Program](commands/task2-9.png)
+
+---
+
+## Task 2 Result
+
+The Turtle successfully moved forward and turned approximately 90 degrees after completing each side. This process was repeated four times, causing the Turtle to follow a square-shaped path.
+
+![Turtle Moving in a Square](commands/task2-10.png)
+
+The task demonstrated how ROS 2 can be used to control a simulated robot by publishing velocity commands to the `/turtle1/cmd_vel` topic and receiving the Turtle's position and orientation through `/turtle1/pose`.
+
+---
